@@ -13,13 +13,30 @@ class Pessoa {
   public int idade;
   public float peso;
   public double altura;
-  
-  
 
   
-  public void Envelhecer(){
-    //resposta = input("(s/n) >> ")
-    
+  public string Envelhecer(int idade){
+    string estagio;
+    if (idade >= 0 && idade < 12){
+      estagio = "infância";
+    }
+    else if (idade >= 12 && idade < 21){
+      estagio = "adolescência";
+    }
+    else if (idade >= 21 && idade < 31){
+      estagio = "juventude";
+    }
+    else if (idade >= 31 && idade < 60){
+      estagio = "meia ideia";
+    }
+    else if (idade >= 60){
+      estagio = "velhice";
+    }
+    else{
+      estagio = ". Sua idade não foi compreendida pelo sistema.";
+    }
+    Console.Write("Você está na fase da >> ");
+    return estagio;
   }
         
   string r;
@@ -66,7 +83,7 @@ class Pessoa {
     }  
     else{
       alturaFutura = altura;
-      Console.WriteLine("Sua altura não se alterará");
+      Console.Write("Sua altura não se alterará >> ");
     }
     return alturaFutura;
   }
