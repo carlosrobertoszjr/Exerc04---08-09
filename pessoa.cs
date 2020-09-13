@@ -42,14 +42,11 @@ class Pessoa {
   string r;
   public string Engordar(double altura, double peso){
     double imc = (peso/(altura*altura));
-    //string r;
     if (imc < 18.5) {
       r = "Você está abaixo do peso. Precisa engordar um pouco..";
-      //Console.WriteLine(r);
     }
     else if (imc > 18.5 && imc < 24.9){
       r = "Seu peso está bom!";
-      //Console.WriteLine(r);
     }
     else{
       r = "";
